@@ -16,6 +16,7 @@
 #undef min
 #include "components/ble/BleController.h"
 #include "components/ble/NotificationManager.h"
+#include "components/ble/TelephoneBearerService.h"
 #include "components/datetime/DateTimeController.h"
 #include "components/fs/FS.h"
 #include "systemtask/SystemTask.h"
@@ -43,6 +44,7 @@ NimbleController::NimbleController(Pinetime::System::SystemTask& systemTask,
     alertNotificationClient {systemTask, notificationManager},
     currentTimeService {dateTimeController},
     musicService {*this},
+    telephoneBearerService {*this, systemTask, notificationManager},
     weatherService {dateTimeController},
     batteryInformationService {batteryController},
     immediateAlertService {systemTask, notificationManager},
@@ -89,6 +91,7 @@ void NimbleController::Init() {
   currentTimeClient.Init();
   currentTimeService.Init();
   musicService.Init();
+  telephoneBearerService.Init();
   weatherService.Init();
   navService.Init();
   anService.Init();

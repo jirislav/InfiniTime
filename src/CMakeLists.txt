@@ -393,6 +393,7 @@ list(APPEND SOURCE_FILES
         displayapp/screens/ApplicationList.cpp
         displayapp/screens/Notifications.cpp
         displayapp/screens/Twos.cpp
+        displayapp/screens/CallTheGate.cpp
         displayapp/screens/HeartRate.cpp
         displayapp/screens/Motion.cpp
         displayapp/screens/FlashLight.cpp
@@ -454,6 +455,7 @@ list(APPEND SOURCE_FILES
         components/brightness/BrightnessController.cpp
         components/motion/MotionController.cpp
         components/ble/NimbleController.cpp
+        components/ble/TelephoneBearerService.cpp
         components/ble/DeviceInformationService.cpp
         components/ble/CurrentTimeClient.cpp
         components/ble/AlertNotificationClient.cpp
@@ -523,6 +525,7 @@ list(APPEND RECOVERY_SOURCE_FILES
         components/brightness/BrightnessController.cpp
         components/motion/MotionController.cpp
         components/ble/NimbleController.cpp
+        components/ble/TelephoneBearerService.cpp
         components/ble/DeviceInformationService.cpp
         components/ble/CurrentTimeClient.cpp
         components/ble/AlertNotificationClient.cpp
@@ -613,6 +616,7 @@ set(INCLUDE_FILES
         displayapp/screens/FirmwareValidation.h
         displayapp/screens/ApplicationList.h
         displayapp/screens/CheckboxList.h
+        displayapp/screens/CallTheGate.h
         displayapp/Apps.h
         displayapp/WatchFaces.h
         displayapp/screens/Notifications.h
@@ -647,6 +651,7 @@ set(INCLUDE_FILES
         components/ble/BleController.h
         components/ble/NotificationManager.h
         components/ble/NimbleController.h
+        components/ble/TelephoneBearerService.h
         components/ble/DeviceInformationService.h
         components/ble/CurrentTimeClient.h
         components/ble/AlertNotificationClient.h

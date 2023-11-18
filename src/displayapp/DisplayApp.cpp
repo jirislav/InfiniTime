@@ -30,6 +30,7 @@
 #include "displayapp/screens/PassKey.h"
 #include "displayapp/screens/Error.h"
 #include "displayapp/screens/Weather.h"
+#include "displayapp/screens/CallTheGate.h"
 
 #include "drivers/Cst816s.h"
 #include "drivers/St7789.h"
@@ -539,6 +540,9 @@ void DisplayApp::LoadScreen(Apps app, DisplayApp::FullRefreshDirections directio
       break;
     case Apps::Metronome:
       currentScreen = std::make_unique<Screens::Metronome>(motorController, *systemTask);
+      break;
+    case Apps::CallTheGate:
+      currentScreen = std::make_unique<Screens::CallTheGate>(systemTask->nimble().telephone());
       break;
     /* Weather debug app
     case Apps::Weather:
